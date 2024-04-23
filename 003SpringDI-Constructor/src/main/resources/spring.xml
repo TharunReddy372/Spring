@@ -1,0 +1,18 @@
+
+<!-- applicationContext.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="address" class="com.ciq.bean.AddressBean">
+		<constructor-arg value="1010"></constructor-arg>
+		<constructor-arg value="BNG"></constructor-arg>
+	</bean>
+
+	<bean id="employee" class="com.ciq.bean.EmployeeBean">
+		<constructor-arg value="1001"></constructor-arg>
+		<constructor-arg value="Arjun"></constructor-arg>
+		<constructor-arg ref="address"></constructor-arg>
+	</bean>
+</beans>
